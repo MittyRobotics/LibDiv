@@ -1,6 +1,6 @@
 # lin-alg-calc-lib
 A library to perform linear algebra and calculus operations, plus some other math stuff!
-Check out https://jitpack.io/#DivAgarwal1/lin-alg-lib to use this libary in your own projects
+Check out https://jitpack.io/#MittyRobotics/LibDiv to use this libary in your own projects
 
 # Docs
 ## Calculus and Algebra
