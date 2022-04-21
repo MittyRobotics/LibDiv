@@ -148,4 +148,45 @@ public class LinAlgLib {
         };
         return derivative.definiteIntegral(0, x);
     }
+
+    public static double dotProduct(ColumnVector v1, ColumnVector v2) throws MatrixDimensionException {
+        if (v1.getRows() != v2.getRows()) throw new MatrixDimensionException();
+
+        double sum = 0;
+        for (int i = 0; i < v1.getRows(); i++) {
+            sum += v1.get(i) * v2.get(i);
+        }
+
+        return sum;
+    }
+
+    public static ColumnVector crossProduct(ColumnVector v1, ColumnVector v2) throws MatrixDimensionException {
+        if (v1.getRows() > 3 || v2.getRows() > 3) throw new MatrixDimensionException();
+
+        ColumnVector a = new ColumnVector(3);
+        ColumnVector b = new ColumnVector(3);
+        ColumnVector v = new ColumnVector(3);
+
+        for (int i = 0; i < v1.getRows(); i++) {
+            a.set(i, v1.get(i));
+        }
+
+        for (int i = 0; i < v2.getRows(); i++) {
+            b.set(i, v2.get(i));
+        }
+
+        v.set(0,
+                a.get(0) * b.get(2) - a.get(2) * b.get(1)
+        );
+
+        v.set(1,
+               a.get(2) * b.get(0) - a.get(0) * b.get(2)
+        );
+
+        v.set(2,
+                a.get(0) * b.get(1) - a.get(1) * b.get(0)
+        );
+
+        return v;
+    }
 }

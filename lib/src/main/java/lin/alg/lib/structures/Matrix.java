@@ -7,6 +7,13 @@ public class Matrix implements Serializable {
 
     public Matrix(int x, int y) {
         matrix = new double[x][y];
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++) {
+                if (x == y) {
+                    set(i, j, 1);
+                }
+            }
+        }
     }
 
     public Matrix(double[][] matrix) {
@@ -115,6 +122,15 @@ public class Matrix implements Serializable {
             sum += Math.pow(-1, a) * get(0, a) * subMatrix.getDeterminant();
         }
         return sum;
+    }
+
+    public static Matrix exponential(Matrix matrix, int power) throws MatrixDimensionException {
+        if (!matrix.isSquare()) throw new MatrixDimensionException();
+        Matrix returnMatrix = new Matrix(matrix.getRows(), matrix.getColumns());
+        for (int i = 0; i < power; i++) {
+            returnMatrix = Matrix.multiply(returnMatrix, matrix);
+        }
+        return returnMatrix;
     }
 
     public Matrix getInverse() throws NoInverseException, MatrixDimensionException {
