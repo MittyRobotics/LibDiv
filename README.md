@@ -1,6 +1,8 @@
-# lin-alg-calc-lib
+# LibDiv
 A library to perform linear algebra and calculus operations, plus some other math stuff!
-Check out https://jitpack.io/#MittyRobotics/LibDiv to use this libary in your own projects
+Check out https://jitpack.io/#MittyRobotics/LibDiv to use this libary in your own projects or click here: 
+
+[![](https://jitpack.io/v/MittyRobotics/LibDiv.svg)](https://jitpack.io/#MittyRobotics/LibDiv)
 
 [![](https://jitpack.io/v/MittyRobotics/LibDiv.svg)](https://jitpack.io/#MittyRobotics/LibDiv)
 
