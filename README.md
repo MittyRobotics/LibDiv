@@ -4,8 +4,6 @@ Check out https://jitpack.io/#MittyRobotics/LibDiv to use this libary in your ow
 
 [![](https://jitpack.io/v/MittyRobotics/LibDiv.svg)](https://jitpack.io/#MittyRobotics/LibDiv)
 
-[![](https://jitpack.io/v/MittyRobotics/LibDiv.svg)](https://jitpack.io/#MittyRobotics/LibDiv)
-
 # Docs
 ## Calculus and Algebra
 ### Create polynomial
